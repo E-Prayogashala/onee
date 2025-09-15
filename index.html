@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anantha Lakshmi Institute of Technology & Sciences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+      background: #faf9f9;
+      color: #222;
+    }
+    .header {
+      background: #a31215;
+      color: #fff;
+      padding: 26px 0 16px 0;
+      text-align: center;
+      border-bottom: 3px solid #950c12;
+      position: relative;
+    }
+    .header .logo-bg {
+      background: #fff;
+      border-radius: 16px;
+      width: 72px;
+      height: 56px;
+      margin: 0 auto 13px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header .logo-bg img {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: none;
+      display: block;
+    }
+    .header .title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: .5px;
+    }
+    .header .subtitle {
+      font-size: 1.07rem;
+      opacity: 0.95;
+      margin-top: -6px;
+      font-weight: 500;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background: #8c1013;
+      border-bottom: 2px solid #73090b;
+    }
+    .navbar a {
+      color: #fff;
+      padding: 16px 38px;
+      display: block;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.13rem;
+      letter-spacing: .3px;
+      transition: background 0.3s;
+      border-right: 1px solid #a71317;
+    }
+    .navbar a:last-child {
+      border-right: none;
+    }
+    .navbar a:hover {
+      background: #b91b20;
+    }
+    .container {
+      max-width: 1100px;
+      width: 95vw;
+      margin: 36px auto 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px 36px 38px 36px;
+      border: 1px solid #eee;
+    }
+    h2 {
+      text-align: center;
+      color: #600e1d;
+      font-size: 1.55rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+      letter-spacing: .5px;
+    }
+    h3 {
+      color: #a31215;
+      font-weight: 600;
+      font-size: 1.21rem;
+      margin: 12px 0 8px 0;
+      letter-spacing: .1px;
+      text-align: center;
+    }
+    .main-section {
+      display: none;
+      margin-top: 30px;
+    }
+    .main-section.active {
+      display: block;
+    }
+    .home-slider-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .slider {
+      position: relative;
+      max-width: 720px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      display: block;
+    }
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+    .about-profile-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 38px;
+      padding: 32px 0;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 28px;
+    }
+    .about-profile-img {
+      max-width: 200px;
+      width: 34vw;
+      border-radius: 16px;
+      box-shadow: 0 1px 10px rgba(0,0,0,0.12);
+      background: #fff;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .about-profile-content {
+      flex: 1;
+    }
+    .about-profile-name {
+      text-align: center;
+      font-size: 1.07rem;
+      font-weight: bold;
+      color: #3a0930;
+      margin-bottom: 6px;
+      margin-top: 3px;
+      letter-spacing: .1px;
+    }
+    .about-profile-title {
+      font-size: 1.19rem;
+      font-weight: 600;
+      color: #a31215;
+      margin-bottom: 10px;
+      letter-spacing: 0.2px;
+      text-align: left;
+    }
+    .about-profile-text {
+      margin-top: 5px;
+      font-size: 1.04rem;
+      line-height: 1.6;
+      color: #383838;
+      text-align: justify;
+    }
+    @media (max-width:900px) {
+      .about-profile-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+      .about-profile-img { width: 70vw; max-width: 240px; }
+      .about-profile-content { width: 94vw; }
+    }
+    @media (max-width:600px) {
+      .container { padding-left: 0; padding-right: 0;}
+      h2 { font-size: 1.12rem; }
+      h3 { font-size: 1rem; }
+      .about-profile-name { font-size: 0.97rem; }
+    }
+    .image {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 12px;
+      display: block;
+      margin: 20px auto;
+    }
+    .about-heading {
+      margin-top: 28px;
+      margin-bottom: 8px;
+      font-size: 1.22rem;
+      color: #a31215;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-bg">
+      <img src="https://tampacareercounsellors.allegiance-educare.in/storage/uploads/colleges/thumb/250_250_1699513037logonew21.png" alt="College Logo" />
+    </div>
+    <div class="title">Anantha Lakshmi Institute of Technology & Sciences</div>
+    <div class="subtitle">Department of Electronics and Communication Engineering</div>
+  </div>
+  <div class="navbar">
+    <a href="#" id="homeTab">Home</a>
+    <a href="#" id="aboutTab">About</a>
+    <a href="#" id="galleryTab">Gallery</a>
+    <a href="#" id="eprayogshalaTab">EPrayogshala</a>
+    <a href="#" id="contactTab">Contact</a>
+  </div>
+  <div class="container">
+    <!-- HOME TAB: sliders centered ONLY -->
+    <div id="homeSection" class="main-section active">
+      <h2>Welcome to ALITS ECE Department</h2>
+      <div class="home-slider-center">
+        <div class="slider">
+          <img class="slides" src="https://www.mymathews.com/media/institute_banner/Anantha_lakshmi_banner.PNG" alt="Slide 1">
+         <img class="slides" src="https://image-static.collegedunia.com/public/college_data/images/campusimage/1699520822263-collegeday.jpeg" alt="Slide 2">
+          <img class="slides" src="https://image-static.collegedunia.com/public/college_data/images/campusimage/1699520822248-collegeday.jpeg" alt="Slide 3">
+        </div>
+      </div>
+      
+      <div class="about-heading">ABOUT INSTITUTION</div>
+      <p style="max-width: 900px; margin: 12px auto 24px auto; font-size: 1rem; line-height: 1.6; text-align: center;">
+        In 2008, Sri M. Anantha Ramudu brought his visionary idea to life by establishing Anantha Lakshmi Institute of Technology and Sciences (ALITS) under the patronage of the Anantha Lakshmi Educational Society. The goal is to create a center for technical innovation and academic excellence in a region that had long needed access to quality higher education. The founding ethos was built on the belief that even in traditionally underserved areas, world-class technical education could be a catalyst for regional growth and social transformation.
+      </p>
+      <h3>INSTITUTE VISION:</h3>
+      <div style="padding-bottom:12px; text-align: center;">
+        To produce globally competent professionals who can contribute to industry, Research &amp; Society at large with environment and ethical consciousness.
+      </div>
+      <h3>INSTITUTE MISSION:</h3>
+      <ul>
+        <li>M1: Adopt continuous improvements in innovative teaching learning methods and state-of-the-art infrastructure to transform students into industry ready professionals.</li>
+        <li>M2: Bridge the gap between curriculum and industry requirements through preparation for industry readiness and students employability enhancement programs.</li>
+        <li>M3: Integrate ethical, societal, and environmental awareness into the students through curricular and co-curricular activities.</li>
+      </ul>
+      <h3>DEPARTMENT VISION:</h3>
+      <div style="padding-bottom:12px; text-align: center;">
+        To produce professional engineers in Electronics and Communication with ethical consciousness to meet local and global standards.
+      </div>
+      <h3>DEPARTMENT MISSION:</h3>
+      <ul>
+        <li>M1: Providing an ambience of teaching-learning process through the state-of-art infrastructure and modern tools for imparting latest technical skills among the students.</li>
+        <li>M2: Providing student-centric facilities and training for the students to acquire a strong collaboration with Electronics Industry.</li>
+        <li>M3: Providing value-based education to find solutions for societal needs.</li>
+      </ul>
+      <h3>PEO’S (PROGRAM EDUCATIONAL OBJECTIVES)</h3>
+      <ul>
+        <li>PEO 1: Graduates can acquire competent knowledge in Electronics and Communication Engineering.</li>
+        <li>PEO 2: Graduates can have successful entrepreneurial and professional careers in the core and allied areas of electronics and communication engineering.</li>
+        <li>PEO 3: Graduates can possess communication skills and work efficiently on team-based projects in electronics, and communication with a sense of social responsibility.</li>
+      </ul>
+    </div>
+    <!-- ABOUT TAB: Profile names updated below photos, rest unchanged -->
+    <div id="aboutSection" class="main-section">
+      <h2>Our Visionary Leadership</h2>
+      <!-- Chairman Section -->
+      <div class="about-profile-row">
+        <div>
+          <img src="chairman.jpg" class="about-profile-img" alt="Chairman" />
+          <div class="about-profile-name">Sri. M. Anantha Ramudu</div>
+        </div>
+        <div class="about-profile-content">
+          <div class="about-profile-title">Chairman</div>
+          <div class="about-profile-text">
+            Education has always been considered a noble profession for it is a process that helps to condition the human mind in its formative years, provide a meaning and purpose in life and enable youth to choose an avenue that will lead to their future career path. I strongly believe that education not only sculpts a good human being but also inculcates a sense of responsibility with principles and values towards society.<br><br>
+            To assure value-based education we established Anantha Lakshmi Institute of Technology & Sciences in 2008. ALITS basically aims at achieving excellence in the key areas of engineering and to produce talented and committed human resource driven by the spirit of innovation and teamwork. We offer under – graduate and post – graduate programmes in Engineering and Management for many students from all parts of India. I would like to thank the generation of parents who have entrusted us with the care and education of their children.
+          </div>
+        </div>
+      </div>
+      <!-- Vice Chairman Section -->
+      <div class="about-profile-row">
+        <div>
+          <img src="vc.jpg" class="about-profile-img" alt="Vice Chairman" />
+          <div class="about-profile-name">Sri. M. Ramesh Naidu</div>
+        </div>
+        <div class="about-profile-content">
+          <div class="about-profile-title">Vice Chairman</div>
+          <div class="about-profile-text">
+            From the bottom of my heart I extend my heartfelt gratitude for considering Anantha Lakshmi Institute of Technology & Sciences. ALITS has witnessed an unparalleled growth in academic and professional stature and will continue to add new dimensions leaving no stone unturned.<br><br>
+            Here we have an excellent faculty committed to quality teaching, a flexible curriculum responsive to the changing needs of the industry, excellent computer facilities, best-in-class infrastructure, and a well stocked library to contribute to the excellence of our undergraduate, postgraduate and management programmes.<br><br>
+            We cordially invite you to visit our campus. I hope you will find this inspiring introduction to the opportunities that await you at our college.
+          </div>
+        </div>
+      </div>
+      <!-- HoD Section -->
+      <div class="about-profile-row" style="border-bottom:none;">
+        <div>
+          <img src="hod.jpg" class="about-profile-img" alt="HoD" />
+          <div class="about-profile-name">DR.Y.L AJAY KUMAR M.Tech., Ph.D</div>
+        </div>
+        <div class="about-profile-content">
+          <div class="about-profile-title">Head of Department</div>
+          <div class="about-profile-text">
+            It is my pleasure to welcome you to Anantha Lakshmi Institute of Technology and Sciences, an Institution under JNTU Ananthapuramu. ALITS have set itself a Vision “Leadership in Quality Technical Education, Interdisciplinary Research & Innovation, With a Focus on Sustainable and Inclusive Technology”. <br><br>
+            The evolution of the institute over the past decade has witnessed strong blend of state-of-the-art infrastructure and intricately intertwined human resource committed to provide professional education with thrust on creativity and innovation.<br><br>
+            The motivating environment in ALITS for knowledge assimilation, generation and dissemination with a sense of social responsibility, human values and concern for social commitment has carved a niche for itself among the best technical institutes.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- The rest (gallery, eprayogshala, contact) remain unchanged -->
+    <div id="gallerySection" class="main-section"> 
+  <h2 style="text-align:center; color:#600e1d; margin-bottom: 20px;">Gallery Videos</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <iframe src="https://drive.google.com/file/d/1E_uTIuGqDT_DCCu8JfSrna_6agY4mX33/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+<iframe src="https://drive.google.com/file/d/1KRr8jNi6aKxS8Yjbeh9Xy41tW-szO9iU/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1MhcX2CsAjVh2MO6IyZKqWFwi8wW-o4Pc/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1T9aid4iiS_2gbO5af8q9uMT2RquShqq0/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1C55MgB48Jy_Znc9TJ2auQuQK0QiAG9k2/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1vwGQxqAmlSYk_g_pDM1gYR9ELwQ3s4wv/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1kLfV6aLFGeVZDcB75Q_Iopq_OlT6ZYA-/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1mczoFay3HOwU5OJ3iuowofG0bjP2EQEk/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/16H5eHQdQNhzTsDqHeNAU6m8fjEZfwoG5/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1ifX6qVJAhxMZMmwYyliP1CjSjnbSbYSJ/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1VLIHB5IsBVGLOE2TKBAU9l816Az579YZ/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1wncsgdUldkpFU5E69FfOUX9_dYzONBA_/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1ehKw1VqHYmakRY30D6pqZ6hu8hJI9QZm/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1SwoOBwm32sE_Zyv5hyxKC1LGFxgurSYi/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/1N-LuRPGPRSwoexI9QAWXiJqfSvai2D8w/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+    <iframe src="https://drive.google.com/file/d/11mcbTSIg1gdY0LfYFUkK_NUV2GiqXiJ4/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
+  </div>
+</div>
+    <div id="eprayogshalaSection" class="main-section"></div>
+    <div id="contactSection" class="main-section">
+      <h2>Contact</h2>
+      <p>
+        Department of Electronics and Communication Engineering<br>
+        Anantha Lakshmi Institute of Technology & Sciences<br>
+        Email: <a href="mailto:info@alitst.edu.in">info@alitst.edu.in</a><br>
+        Phone: +91-12345-67890
+      </p>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let slideIndex = 0;
+      const showSlides = () => {
+        const slides = document.getElementsByClassName("slides");
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000);
+      };
+      showSlides();
+      // Tab handling
+      const tabs = [
+        {tab: "homeTab", section: "homeSection"},
+        {tab: "aboutTab", section: "aboutSection"},
+        {tab: "galleryTab", section: "gallerySection"},
+        {tab: "eprayogshalaTab", section: "eprayogshalaSection"},
+        {tab: "contactTab", section: "contactSection"}
+      ];
+      tabs.forEach(({tab, section}) => {
+        document.getElementById(tab).addEventListener("click", function(e){
+          e.preventDefault();
+          tabs.forEach(({section: sec}) => document.getElementById(sec).classList.remove("active"));
+          document.getElementById(section).classList.add("active");
+        });
+      });
+      // Home tab is active at first
+      document.getElementById("homeSection").classList.add("active");
+    });
+  </script>
+</body>
+</html
