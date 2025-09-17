@@ -1,376 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Anantha Lakshmi Institute of Technology & Sciences</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Sri Shivabalayogi Maharaj Ashramam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts: Cinzel & Lato -->
+  <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Lato:400,700&display=swap" rel="stylesheet">
   <style>
     body {
+      background: #fff8e1;
+      color: #532100;
+      font-family: 'Lato', Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
-      background: #faf9f9;
-      color: #222;
+      padding: 0;
     }
-    .header {
-      background: #a31215;
-      color: #fff;
-      padding: 26px 0 16px 0;
+    header {
+      background: linear-gradient(90deg, #FFCA32 0%, #FCC200 100%);
+      padding: 24px 0;
       text-align: center;
-      border-bottom: 3px solid #950c12;
-      position: relative;
+      box-shadow: 0 2px 8px rgba(251, 156, 27, 0.10);
     }
-    .header .logo-bg {
-      background: #fff;
-      border-radius: 16px;
-      width: 72px;
-      height: 56px;
-      margin: 0 auto 13px auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .header .logo-bg img {
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      background: none;
-      display: block;
-    }
-    .header .title {
-      font-size: 1.7rem;
-      font-weight: 700;
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
       margin-bottom: 8px;
-      letter-spacing: .5px;
     }
-    .header .subtitle {
-      font-size: 1.07rem;
-      opacity: 0.95;
-      margin-top: -6px;
-      font-weight: 500;
-    }
-    .navbar {
-      display: flex;
-      justify-content: center;
-      background: #8c1013;
-      border-bottom: 2px solid #73090b;
-    }
-    .navbar a {
-      color: #fff;
-      padding: 16px 38px;
-      display: block;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.13rem;
-      letter-spacing: .3px;
-      transition: background 0.3s;
-      border-right: 1px solid #a71317;
-    }
-    .navbar a:last-child {
-      border-right: none;
-    }
-    .navbar a:hover {
-      background: #b91b20;
-    }
-    .container {
-      max-width: 1100px;
-      width: 95vw;
-      margin: 36px auto 0 auto;
-      background: #fff;
-      border-radius: 12px;
-      padding: 40px 36px 38px 36px;
-      border: 1px solid #eee;
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.4em;
+      margin: 8px 0 4px 0;
+      color: #C83A00;
+      letter-spacing: 1px;
     }
     h2 {
-      text-align: center;
-      color: #600e1d;
-      font-size: 1.55rem;
-      font-weight: 600;
-      margin-bottom: 28px;
-      letter-spacing: .5px;
+      font-family: 'Cinzel', serif;
+      font-size: 1.4em;
+      color: #39807F;
+      margin: 0 0 14px 0;
     }
-    h3 {
-      color: #a31215;
-      font-weight: 600;
-      font-size: 1.21rem;
-      margin: 12px 0 8px 0;
-      letter-spacing: .1px;
-      text-align: center;
+    nav {
+      margin-top: 16px;
     }
-    .main-section {
-      display: none;
-      margin-top: 30px;
+    nav a {
+      color: #532100;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 700;
+      font-family: 'Lato', Arial, sans-serif;
+      letter-spacing: 0.03em;
     }
-    .main-section.active {
-      display: block;
+    nav a:hover {
+      color: #FB9C1B;
     }
-    .home-slider-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .slider {
-      position: relative;
-      max-width: 720px;
-      margin: 20px auto;
-      overflow: hidden;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-      display: block;
-    }
-    .slides {
-      display: none;
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-      margin: 0 auto;
-      object-fit: cover;
-    }
-    .about-profile-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 38px;
-      padding: 32px 0;
-      border-bottom: 1px solid #eee;
-      margin-bottom: 28px;
-    }
-    .about-profile-img {
-      max-width: 200px;
-      width: 34vw;
-      border-radius: 16px;
-      box-shadow: 0 1px 10px rgba(0,0,0,0.12);
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
       background: #fff;
-      display: block;
-      margin-bottom: 10px;
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(200,50,0,0.08);
+      padding: 36px 18px;
     }
-    .about-profile-content {
-      flex: 1;
-    }
-    .about-profile-name {
+    .event-highlight {
+      background: linear-gradient(90deg, #FB9C1B 40%, #FCC200 100%);
+      color: #532100;
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 1.3em;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 18px #fff3cd;
+      font-family: 'Cinzel', serif;
       text-align: center;
-      font-size: 1.07rem;
-      font-weight: bold;
-      color: #3a0930;
+    }
+    .about, .contact {
+      margin-top: 42px;
+      line-height: 1.7;
+    }
+    .gallery-title {
+      font-family: 'Cinzel', serif;
+      color: #C83A00;
+      font-size: 1.3em;
+      margin: 28px 0 18px 0;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 210px;
+      height: 140px;
+      object-fit: cover;
+      border: 3px solid #FB9C1B;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px #ffe0b2;
       margin-bottom: 6px;
-      margin-top: 3px;
-      letter-spacing: .1px;
+      background: #fff8e1;
     }
-    .about-profile-title {
-      font-size: 1.19rem;
+    /* Contact form */
+    .contact {
+      margin-top: 42px;
+      padding: 28px 14px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #fff8e1 50%, #FFE994 100%);
+      box-shadow: 0 2px 10px #ffe0b2;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact input, .contact textarea {
+      width: 98%;
+      padding: 7px 10px;
+      margin: 8px 0 12px 0;
+      border: 1px solid #FB9C1B;
+      border-radius: 3px;
+      font-size: 1em;
+      font-family: 'Lato', Arial, sans-serif;
+      background: #fffdfa;
+    }
+    .contact label {
       font-weight: 600;
-      color: #a31215;
-      margin-bottom: 10px;
-      letter-spacing: 0.2px;
-      text-align: left;
+      color: #C83A00;
     }
-    .about-profile-text {
-      margin-top: 5px;
-      font-size: 1.04rem;
-      line-height: 1.6;
-      color: #383838;
-      text-align: justify;
+    .contact button {
+      background: #C83A00;
+      color: #fff;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 5px;
+      font-size: 1.1em;
+      font-family: 'Cinzel', serif;
+      cursor: pointer;
+      transition: background 0.2s;
     }
-    @media (max-width:900px) {
-      .about-profile-row {
+    .contact button:hover {
+      background: #FB9C1B;
+      color: #532100;
+    }
+    footer {
+      background: #fcc200;
+      color: #532100;
+      text-align: center;
+      padding: 18px 0;
+      letter-spacing: 0.1em;
+      font-size: 1.07em;
+      margin-top: 48px;
+      border-radius: 0 0 8px 8px;
+    }
+    @media (max-width: 700px) {
+      .gallery img {
+        width: 100%;
+        height: 140px;
+      }
+      .gallery {
         flex-direction: column;
         align-items: center;
-        gap: 8px;
       }
-      .about-profile-img { width: 70vw; max-width: 240px; }
-      .about-profile-content { width: 94vw; }
-    }
-    @media (max-width:600px) {
-      .container { padding-left: 0; padding-right: 0;}
-      h2 { font-size: 1.12rem; }
-      h3 { font-size: 1rem; }
-      .about-profile-name { font-size: 0.97rem; }
-    }
-    .image {
-      width: 100%;
-      max-width: 800px;
-      border-radius: 12px;
-      display: block;
-      margin: 20px auto;
-    }
-    .about-heading {
-      margin-top: 28px;
-      margin-bottom: 8px;
-      font-size: 1.22rem;
-      color: #a31215;
-      text-align: center;
+      .container {
+        padding: 10px 5px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <div class="logo-bg">
-      <img src="https://tampacareercounsellors.allegiance-educare.in/storage/uploads/colleges/thumb/250_250_1699513037logonew21.png" alt="College Logo" />
-    </div>
-    <div class="title">Anantha Lakshmi Institute of Technology & Sciences</div>
-    <div class="subtitle">Department of Electronics and Communication Engineering</div>
-  </div>
-  <div class="navbar">
-    <a href="#" id="homeTab">Home</a>
-    <a href="#" id="aboutTab">About</a>
-    <a href="#" id="galleryTab">Gallery</a>
-    <a href="#" id="eprayogshalaTab">EPrayogshala</a>
-    <a href="#" id="contactTab">Contact</a>
-  </div>
+  <header>
+    <!-- Replace 'logo.png' with your logo's path -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkNU-GfoVL1UNdijVwJH9CWPh-ZhSNhcPXhA&s" alt="Sri Shivabalayogi Ashram Logo" class="logo">
+    <h1>Sri Shivabalayogi Maharaj Ashramam</h1>
+    <h2>Dussara Pooja Mahotsavam 2025</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
   <div class="container">
-    <!-- HOME TAB: sliders centered ONLY -->
-    <div id="homeSection" class="main-section active">
-      <h2>Welcome to ALITS ECE Department</h2>
-      <div class="home-slider-center">
-        <div class="slider">
-          <img class="slides" src="https://www.mymathews.com/media/institute_banner/Anantha_lakshmi_banner.PNG" alt="Slide 1">
-         <img class="slides" src="https://image-static.collegedunia.com/public/college_data/images/campusimage/1699520822263-collegeday.jpeg" alt="Slide 2">
-          <img class="slides" src="https://image-static.collegedunia.com/public/college_data/images/campusimage/1699520822248-collegeday.jpeg" alt="Slide 3">
-        </div>
-      </div>
-      
-      <div class="about-heading">ABOUT INSTITUTION</div>
-      <p style="max-width: 900px; margin: 12px auto 24px auto; font-size: 1rem; line-height: 1.6; text-align: center;">
-        In 2008, Sri M. Anantha Ramudu brought his visionary idea to life by establishing Anantha Lakshmi Institute of Technology and Sciences (ALITS) under the patronage of the Anantha Lakshmi Educational Society. The goal is to create a center for technical innovation and academic excellence in a region that had long needed access to quality higher education. The founding ethos was built on the belief that even in traditionally underserved areas, world-class technical education could be a catalyst for regional growth and social transformation.
-      </p>
-      <h3>INSTITUTE VISION:</h3>
-      <div style="padding-bottom:12px; text-align: center;">
-        To produce globally competent professionals who can contribute to industry, Research &amp; Society at large with environment and ethical consciousness.
-      </div>
-      <h3>INSTITUTE MISSION:</h3>
-      <ul>
-        <li>M1: Adopt continuous improvements in innovative teaching learning methods and state-of-the-art infrastructure to transform students into industry ready professionals.</li>
-        <li>M2: Bridge the gap between curriculum and industry requirements through preparation for industry readiness and students employability enhancement programs.</li>
-        <li>M3: Integrate ethical, societal, and environmental awareness into the students through curricular and co-curricular activities.</li>
-      </ul>
-      <h3>DEPARTMENT VISION:</h3>
-      <div style="padding-bottom:12px; text-align: center;">
-        To produce professional engineers in Electronics and Communication with ethical consciousness to meet local and global standards.
-      </div>
-      <h3>DEPARTMENT MISSION:</h3>
-      <ul>
-        <li>M1: Providing an ambience of teaching-learning process through the state-of-art infrastructure and modern tools for imparting latest technical skills among the students.</li>
-        <li>M2: Providing student-centric facilities and training for the students to acquire a strong collaboration with Electronics Industry.</li>
-        <li>M3: Providing value-based education to find solutions for societal needs.</li>
-      </ul>
-      <h3>PEO’S (PROGRAM EDUCATIONAL OBJECTIVES)</h3>
-      <ul>
-        <li>PEO 1: Graduates can acquire competent knowledge in Electronics and Communication Engineering.</li>
-        <li>PEO 2: Graduates can have successful entrepreneurial and professional careers in the core and allied areas of electronics and communication engineering.</li>
-        <li>PEO 3: Graduates can possess communication skills and work efficiently on team-based projects in electronics, and communication with a sense of social responsibility.</li>
-      </ul>
+    <div class="event-highlight">
+      Dussara Poojas Ongoing! Join us to experience daily rituals, bhajans, and the divine blessings of Sri Shivabalayogi Maharaj.
     </div>
-    <!-- ABOUT TAB: Profile names updated below photos, rest unchanged -->
-    <div id="aboutSection" class="main-section">
-      <h2>Our Visionary Leadership</h2>
-      <!-- Chairman Section -->
-      <div class="about-profile-row">
-        <div>
-          <img src="chairman.jpg" class="about-profile-img" alt="Chairman" />
-          <div class="about-profile-name">Sri. M. Anantha Ramudu</div>
-        </div>
-        <div class="about-profile-content">
-          <div class="about-profile-title">Chairman</div>
-          <div class="about-profile-text">
-            Education has always been considered a noble profession for it is a process that helps to condition the human mind in its formative years, provide a meaning and purpose in life and enable youth to choose an avenue that will lead to their future career path. I strongly believe that education not only sculpts a good human being but also inculcates a sense of responsibility with principles and values towards society.<br><br>
-            To assure value-based education we established Anantha Lakshmi Institute of Technology & Sciences in 2008. ALITS basically aims at achieving excellence in the key areas of engineering and to produce talented and committed human resource driven by the spirit of innovation and teamwork. We offer under – graduate and post – graduate programmes in Engineering and Management for many students from all parts of India. I would like to thank the generation of parents who have entrusted us with the care and education of their children.
-          </div>
-        </div>
-      </div>
-      <!-- Vice Chairman Section -->
-      <div class="about-profile-row">
-        <div>
-          <img src="vc.jpg" class="about-profile-img" alt="Vice Chairman" />
-          <div class="about-profile-name">Sri. M. Ramesh Naidu</div>
-        </div>
-        <div class="about-profile-content">
-          <div class="about-profile-title">Vice Chairman</div>
-          <div class="about-profile-text">
-            From the bottom of my heart I extend my heartfelt gratitude for considering Anantha Lakshmi Institute of Technology & Sciences. ALITS has witnessed an unparalleled growth in academic and professional stature and will continue to add new dimensions leaving no stone unturned.<br><br>
-            Here we have an excellent faculty committed to quality teaching, a flexible curriculum responsive to the changing needs of the industry, excellent computer facilities, best-in-class infrastructure, and a well stocked library to contribute to the excellence of our undergraduate, postgraduate and management programmes.<br><br>
-            We cordially invite you to visit our campus. I hope you will find this inspiring introduction to the opportunities that await you at our college.
-          </div>
-        </div>
-      </div>
-      <!-- HoD Section -->
-      <div class="about-profile-row" style="border-bottom:none;">
-        <div>
-          <img src="hod.jpg" class="about-profile-img" alt="HoD" />
-          <div class="about-profile-name">DR.Y.L AJAY KUMAR M.Tech., Ph.D</div>
-        </div>
-        <div class="about-profile-content">
-          <div class="about-profile-title">Head of Department</div>
-          <div class="about-profile-text">
-            It is my pleasure to welcome you to Anantha Lakshmi Institute of Technology and Sciences, an Institution under JNTU Ananthapuramu. ALITS have set itself a Vision “Leadership in Quality Technical Education, Interdisciplinary Research & Innovation, With a Focus on Sustainable and Inclusive Technology”. <br><br>
-            The evolution of the institute over the past decade has witnessed strong blend of state-of-the-art infrastructure and intricately intertwined human resource committed to provide professional education with thrust on creativity and innovation.<br><br>
-            The motivating environment in ALITS for knowledge assimilation, generation and dissemination with a sense of social responsibility, human values and concern for social commitment has carved a niche for itself among the best technical institutes.
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- The rest (gallery, eprayogshala, contact) remain unchanged -->
-    <div id="gallerySection" class="main-section"> 
-  <h2 style="text-align:center; color:#600e1d; margin-bottom: 20px;">Gallery Videos</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-    <iframe src="https://drive.google.com/file/d/1E_uTIuGqDT_DCCu8JfSrna_6agY4mX33/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-<iframe src="https://drive.google.com/file/d/1KRr8jNi6aKxS8Yjbeh9Xy41tW-szO9iU/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1MhcX2CsAjVh2MO6IyZKqWFwi8wW-o4Pc/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1T9aid4iiS_2gbO5af8q9uMT2RquShqq0/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1C55MgB48Jy_Znc9TJ2auQuQK0QiAG9k2/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1vwGQxqAmlSYk_g_pDM1gYR9ELwQ3s4wv/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1kLfV6aLFGeVZDcB75Q_Iopq_OlT6ZYA-/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1mczoFay3HOwU5OJ3iuowofG0bjP2EQEk/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/16H5eHQdQNhzTsDqHeNAU6m8fjEZfwoG5/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1ifX6qVJAhxMZMmwYyliP1CjSjnbSbYSJ/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1VLIHB5IsBVGLOE2TKBAU9l816Az579YZ/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1wncsgdUldkpFU5E69FfOUX9_dYzONBA_/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1ehKw1VqHYmakRY30D6pqZ6hu8hJI9QZm/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1SwoOBwm32sE_Zyv5hyxKC1LGFxgurSYi/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/1N-LuRPGPRSwoexI9QAWXiJqfSvai2D8w/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-    <iframe src="https://drive.google.com/file/d/11mcbTSIg1gdY0LfYFUkK_NUV2GiqXiJ4/preview" width="390" height="220" frameborder="0" allowfullscreen class="image" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);"></iframe>
-  </div>
-</div>
-    <div id="eprayogshalaSection" class="main-section"></div>
-    <div id="contactSection" class="main-section">
-      <h2>Contact</h2>
+
+    <section id="about" class="about">
+      <h2>About the Ashram</h2>
       <p>
-        Department of Electronics and Communication Engineering<br>
-        Anantha Lakshmi Institute of Technology & Sciences<br>
-        Email: <a href="mailto:info@alitst.edu.in">info@alitst.edu.in</a><br>
-        Phone: +91-12345-67890
+        Sri Shivabalayogi Maharaj Ashramam is a vibrant spiritual center dedicated to the teachings, meditation, and blessings of Swamiji. This sacred space invites all devotees for serene meditation, soulful bhajans, and participation in devotional festivals like Dussara. In our ashramam every devotee can do pooja by themselvs,In our temple we hava BALAYOGI MAHARAJ GURUJI,LOARD SIVA,MATHA PARVATI,SRI VALLI DEVASENA SAMETHA SRI SUBRAHMANESWARA SWAMI temples too.And every year we celebrate swamiji JAYANTHI,TAPASIDDI...functions too.Everyone must visite our temple once u will observe the changes in you.
+Every year we celebrate dussara 15 days including kalyanam of sivaparvathi,valli deveasena sametha sri subrahamneswara and sridevi bhudevi sametha sri venkateswara swami. this is one of the  biggest celebration in every year. <br>
+        <b>Address:</b> <span style="color:#39807F;">Shri SHri Shri sivabalayogi maharaj ashramam anatapuram near shivakoti ,benglore road ATP</span><br>
+        <b>Timings:</b> 6:00 AM – 8:00 PM daily<br>
+        <b>Special Events:</b> Daily pooja and aarti during Dussara, cultural events, spiritual discourses, and prasad distribution.<br>
       </p>
+    </section>
+
+    <div class="gallery-title" id="gallery">Dussara Pooja Moments</div>
+    <div class="gallery">
+      <!-- Replace src paths with your images. Recommended size: 800x550 px -->
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npvyg-1qHbFoBoP-apfQKIqxWmPc-ett5i4TfBIYFhIDn1oeCn6JbuXVeLKesmynvsF1clouj8zwiqxrJD50Yn1-8mPp8SzP0rYT8XXz2M752Q4XXIwa0M334k41HwOFew2dQn2=s1360-w1360-h1020-rw" alt="Dussara Pooja Ritual">
+      <img src="https://www.shivabalayogitrust.org/wp-content/uploads/2021/02/151501727_3615167718590431_673737355367013964_o.jpg" alt="Evening Aarti">
+      <img src="https://www.shivabalayogitrust.org/wp-content/uploads/2021/02/149797037_3615167785257091_8358426639176953364_o.jpg" alt="Ashram Decoration">
+<img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4no1xKhXM2lY2K6NQ2ogj0sBju4FrEow98Xi8YsyjqRGT9AabZYIfOYtXsrQRdKtjqFtEe1vYpHXJhjDBxyjitBTBdF01v5P2fDvsvRb_B96KKuyeQgz4XtDBH93l4cJMUGobaCZ=s1360-w1360-h1020-rw" alt="Devotees Praying">
+<img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noebs2KP9zG_SMGay7TJwc3-dUsfBI92K41Jc5fcdTZiJl8VTjISBFazlwzz92RqDoJCQK7qzRUBJlxNB1k0pwNYmySzboGXCE9UlcCzxKf-myFzxrlc3TSNvLbccKP2lDA78M=s1360-w1360-h1020-rw" alt="Devotees Praying">
+<img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqaljh_GW-SQqPwRf0x2XfYnhYkD7kG0A2zCBm0XY4FzdYFSMPyAVwaxgRSJ7vezP9IbZhJcM7mPOpJlaeW6QxJeuZbGoaz7AdGD9eKkaIOdTSRof-dwr89JMSpNMNPGOmlofNXNA=s1360-w1360-h1020-rw" alt="Devotees Praying">
     </div>
+
+    <section id="contact" class="contact">
+      <h2>Contact & Enquiries</h2>
+      <form>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <button type="submit">Send Message</button>
+      </form>
+      <br>
+      <b>Phone/WhatsApp:</b> <span style="color:#39807F;">+91-0000000000</span><br>
+      <b>Email:</b> <span style="color:#39807F;">sk718600@gmail.com</span>
+    </section>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      let slideIndex = 0;
-      const showSlides = () => {
-        const slides = document.getElementsByClassName("slides");
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3000);
-      };
-      showSlides();
-      // Tab handling
-      const tabs = [
-        {tab: "homeTab", section: "homeSection"},
-        {tab: "aboutTab", section: "aboutSection"},
-        {tab: "galleryTab", section: "gallerySection"},
-        {tab: "eprayogshalaTab", section: "eprayogshalaSection"},
-        {tab: "contactTab", section: "contactSection"}
-      ];
-      tabs.forEach(({tab, section}) => {
-        document.getElementById(tab).addEventListener("click", function(e){
-          e.preventDefault();
-          tabs.forEach(({section: sec}) => document.getElementById(sec).classList.remove("active"));
-          document.getElementById(section).classList.add("active");
-        });
-      });
-      // Home tab is active at first
-      document.getElementById("homeSection").classList.add("active");
-    });
-  </script>
+
+  <footer>
+    &copy; 2025 Sri Shivabalayogi Maharaj Ashramam. All Rights Reserved.
+  </footer>
 </body>
-</html
+</html>
